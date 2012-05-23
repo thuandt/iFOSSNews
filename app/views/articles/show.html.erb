@@ -6,10 +6,10 @@
       <%= image_tag @article.photothumb.url %>
     </div>
 
-  <p><%= @article.body %></p>
+  <p><%=raw @article.body.bbcode_to_html %></p>
 
   <div class="form-actions">
-    <%= link_to 'Quay lại', new_path, :class => 'btn'  %>
+    <%= link_to 'Quay lại', "/", :class => 'btn btn-primary'  %>
   </div>
 
 </div>

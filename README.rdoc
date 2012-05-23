@@ -10,3 +10,5 @@ software (FLOSS)
 Đây là bài tập lớn môn Web của mình.
 
 Web sử dụng Ruby on Rails và Twitter Bootstrap Tookit
+
+== Tất cả các nội dung trong trang web chỉ mang tính chất tham khảo

@@ -1,4 +1,8 @@
 IFOSSNews::Application.routes.draw do
+  get "contact/index"
+
+  get "faq/index"
+
   get "new/index"
 
   resources :articles

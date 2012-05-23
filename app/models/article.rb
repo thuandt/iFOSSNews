@@ -3,7 +3,6 @@
 class Article < ActiveRecord::Base
   validates_presence_of :title, :body, :photothumb
   attr_accessible :body, :title, :photothumb
-  attr_accessor :photothumb_file_name, :photothumb_content_type, :photothumb_file_size, :photothumb_updated_at
 
   has_attached_file :photothumb,
                     :styles => { :medium => "300x300>",

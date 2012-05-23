@@ -9,9 +9,11 @@ IFOSSNews::Application.routes.draw do
 
   root :to => 'new#index', :as => 'new'
 
-  match "/faqs" => "faq#index"
+  match '/admin', :controller => 'articles', :action => 'index'
 
-  match "/contact" => "contact#index"
+  match '/faqs' => 'faq#index'
+
+  match '/contact' => 'contact#index'
 
   # Redirect all unknown path to /
   match '*path' => redirect('/')

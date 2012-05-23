@@ -1,6 +1,7 @@
 @import "twitter/bootstrap/bootstrap";
-body { padding-top: 60px; }
-.span4 { margin-bottom: 20px; }
+body {
+	padding-top: 60px;
+}
 
 @import "twitter/bootstrap/responsive";
 
@@ -18,13 +19,20 @@ body { padding-top: 60px; }
 // Font Awesome
 @import "fontawesome";
 
-// Your custom LESS stylesheets goes here
-//
-// Since bootstrap was imported above you have access to its mixins which
-// you may use and inherit here
-//
-// If you'd like to override bootstrap's own variables, you can do so here as well
-// See http://twitter.github.com/bootstrap/less.html for their names and documentation
-//
-// Example:
-// @linkColor: #ff0000;
+body {
+	background-color: #F0F0F0;
+}
+
+.span4 {
+	background-color: #FFF;
+	margin: 4px!important;
+	padding: 10px;
+	border-color: #999;
+	border: 1px solid white;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 8px 9px 20px rgba(0, 0, 0, 0.74);
+    -moz-box-shadow: 8px 9px 20px rgba(0, 0, 0, 0.74);
+    -webkit-box-shadow: 8px 9px 20px rgba(0, 0, 0, 0.74);
+}

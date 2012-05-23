@@ -1,5 +1,9 @@
 IFOSSNews::Application.routes.draw do
+  get "new/index"
+
   resources :articles
+
+  root :to => 'new#index', :as => 'new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

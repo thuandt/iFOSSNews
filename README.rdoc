@@ -3,3 +3,11 @@
 Trang thông tin về Phần Mềm Tự Do và Nguồn Mở (FLOSS)
 
 FLOSS = Free and open-source software (F/OSS, FOSS) or free/libre/open-source software (FLOSS)
+
+
+TODO
+====
+
++ Chia trang
++ Notice
+

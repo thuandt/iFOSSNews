@@ -1,4 +1,18 @@
-<%- model_class = @article.class -%>
-<h1><%=t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human,
-                                 :default => "Edit #{model_class.model_name.human}") %></h1>
-<%= render :partial => 'form' %>
+<% content_for :title,  "Sửa bài viết" %>
+<h1>Sửa bài viết</h1>
+<br />
+<%= simple_form_for @article, :html => { :class => 'form-horizontal' } do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :title,
+                :label => "Tiêu đề",
+                :input_html => { :class => "span8" } %>
+    <%= f.input :body,
+                :label => "Nội dung",
+                :input_html => { :class => "span8" } %>
+
+    <div class="form-actions">
+      <%= f.submit "Cập nhật", :class => 'btn btn-primary' %>
+      <%= link_to "Hủy", articles_path, :class => 'btn' %>
+    </div>
+
+<% end %>

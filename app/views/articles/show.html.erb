@@ -1,21 +1,17 @@
-<%- model_class = @article.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human %></h1>
+<% content_for :title,  @article.title %>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @article.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
-  <dd><%= @article.body %></dd>
-</dl>
+<div class="span8" style="width:100%">
+  <h3><%= @article.title %></h3>
+  <p><%= @article.body %></p>
 
-<div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
-              articles_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_article_path(@article), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              article_path(@article),
-              :method => 'delete',
-              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
-              :class => 'btn btn-danger' %>
+  <div class="form-actions">
+    <%= link_to 'Quay lại', articles_path, :class => 'btn'  %>
+    <%= link_to 'Chỉnh sửa', edit_article_path(@article), :class => 'btn' %>
+    <%= link_to 'Xóa', article_path(@article),
+                :method => 'delete',
+                :confirm => 'Bạn chắc chắn muốn xóa bài viết này?',
+                :class => 'btn btn-danger' %>
+  </div>
+
 </div>
+

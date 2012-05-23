@@ -1,4 +1,6 @@
 IFOSSNews::Application.routes.draw do
+  get "search/index"
+
   get "contact/index"
 
   get "faq/index"

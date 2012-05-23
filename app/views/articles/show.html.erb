@@ -5,12 +5,7 @@
   <p><%= @article.body %></p>
 
   <div class="form-actions">
-    <%= link_to 'Quay lại', articles_path, :class => 'btn'  %>
-    <%= link_to 'Chỉnh sửa', edit_article_path(@article), :class => 'btn' %>
-    <%= link_to 'Xóa', article_path(@article),
-                :method => 'delete',
-                :confirm => 'Bạn chắc chắn muốn xóa bài viết này?',
-                :class => 'btn btn-danger' %>
+    <%= link_to 'Quay lại', new_path, :class => 'btn'  %>
   </div>
 
 </div>

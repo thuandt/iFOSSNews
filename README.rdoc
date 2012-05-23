@@ -5,3 +5,8 @@ Trang thông tin về Phần Mềm Tự Do và Nguồn Mở (FLOSS)
 FLOSS = Free and open-source software (F/OSS, FOSS) or free/libre/open-source
 software (FLOSS)
 
+== Notes
+
+Đây là bài tập lớn môn Web của mình.
+
+Web sử dụng Ruby on Rails và Twitter Bootstrap Tookit

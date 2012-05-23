@@ -2,11 +2,16 @@
 <h1>Đăng tin mới</h1>
 <br />
 
-<%= simple_form_for @article, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @article,
+                    :html => { :class => 'form-horizontal',
+                               :multipart => true } do |f| %>
     <%= f.error_notification %>
     <%= f.input :title,
                 :label => "Tiêu đề",
                 :input_html => { :class => "span8" } %>
+
+    <%= f.file_field :photothumb %>
+
     <%= f.input :body,
                 :label => "Nội dung",
                 :input_html => { :class => "span8" } %>

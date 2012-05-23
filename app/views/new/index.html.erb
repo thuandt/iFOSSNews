@@ -4,6 +4,7 @@
   <% @articles.each do |article| %>
     <div class="span4">
       <h4><%= link_to article.title, article_path(article) %></h4>
+      <%= image_tag article.photothumb.url(:medium) %>
       <p><%= truncate article.body, :length => 350 %></p>
     </div>
   <% end %>

@@ -1,7 +1,11 @@
 <% content_for :title,  @article.title %>
 
 <div class="span8" style="width:100%">
-  <h3><%= @article.title %></h3>
+  <h4><%= @article.title %></h4>
+    <div class="thumbnail">
+      <%= image_tag @article.photothumb.url %>
+    </div>
+
   <p><%= @article.body %></p>
 
   <div class="form-actions">

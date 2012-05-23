@@ -1,13 +1,16 @@
 IFOSSNews::Application.routes.draw do
+
+  get "articles/admin"
+
   get "contact/index"
 
   get "faq/index"
 
   resources :articles
 
-  root :to => 'new#index', :as => 'new'
+  root :to => 'articles#index'
 
-  match '/admin', :controller => 'articles', :action => 'index'
+  match '/admin' => 'articles#admin'
 
   match '/faqs' => 'faq#index'
 

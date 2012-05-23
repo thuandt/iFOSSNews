@@ -1,0 +1,37 @@
+<% content_for :title, "Quản trị hệ thống" %>
+
+<div class="span12">
+  <%= link_to "Đăng tin mới",
+              new_article_path,
+              :class => 'btn btn-primary' %>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Tiêu đề</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= link_to article.title, article_path(article) %></td>
+          <td>
+            <%= link_to "Sửa", edit_article_path(article),
+                        :class => 'btn btn-mini' %>
+            <%= link_to "Xóa", article_path(article),
+                        :method => :delete,
+                        :confirm => 'Bạn chắc chắn muốn xóa bài viết này',
+                        :class => 'btn btn-mini btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to "Đăng tin mới",
+              new_article_path,
+              :class => 'btn btn-primary' %>
+
+  <%= will_paginate @articles %>
+</div>

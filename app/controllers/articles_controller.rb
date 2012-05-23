@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.paginate(:page => params[:page], :per_page => 5).order('created_at DESC')
+    @articles = Article.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -78,6 +78,17 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to articles_url }
       format.json { head :no_content }
+    end
+  end
+
+  # GET /articles/admin
+  # GET /articles/admin
+  def admin
+    @articles = Article.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
+
+    respond_to do |format|
+      format.html # admin.html.erb
+      format.json { render json: @articles }
     end
   end
 end

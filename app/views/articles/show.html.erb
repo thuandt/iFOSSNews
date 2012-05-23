@@ -9,7 +9,7 @@
   <p><%=raw @article.body.bbcode_to_html %></p>
 
   <div class="form-actions">
-    <%= link_to 'Quay lại', "/", :class => 'btn btn-primary'  %>
+    <%= link_to 'Quay lại', request.referer, :class => 'btn btn-primary'  %>
   </div>
 
 </div>

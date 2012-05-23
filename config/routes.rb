@@ -9,6 +9,9 @@ IFOSSNews::Application.routes.draw do
 
   root :to => 'new#index', :as => 'new'
 
+  match "/faqs" => "faq#index"
+  match "/contact" => "contact#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

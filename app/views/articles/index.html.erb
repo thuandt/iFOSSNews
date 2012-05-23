@@ -29,9 +29,9 @@
     </tbody>
   </table>
 
-  <%= will_paginate @articles %>
-
   <%= link_to "Đăng tin mới",
               new_article_path,
               :class => 'btn btn-primary' %>
+
+  <%= will_paginate @articles %>
 </div>

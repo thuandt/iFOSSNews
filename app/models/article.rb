@@ -20,4 +20,12 @@ class Article < ActiveRecord::Base
     title_short = title_short.gsub(/[^a-z0-9]+/i, '-')
     "#{id}-#{title_short}"
   end
+
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['title or body LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
 end

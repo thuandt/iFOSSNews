@@ -10,7 +10,11 @@ IFOSSNews::Application.routes.draw do
   root :to => 'new#index', :as => 'new'
 
   match "/faqs" => "faq#index"
+
   match "/contact" => "contact#index"
+
+  # Redirect all unknown path to /
+  match '*path' => redirect('/')
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

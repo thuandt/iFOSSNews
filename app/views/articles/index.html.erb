@@ -3,7 +3,8 @@
 <div class="row">
   <% @articles.each do |article| %>
     <div class="span4">
-      <h4><%= link_to article.title, article_path(article) %></h4>
+      <h4><%= link_to truncate(article.title, :length => 45),
+                      article_path(article) %></h4>
       <div class="thumbnail">
         <%= image_tag article.photothumb.url(:medium) %>
       </div>
